@@ -34,7 +34,7 @@ public class EditCommandHandler : IRequestHandler<EditCommand, Result>
 
         if (result is null)
         {
-            // _logger.LogWarning($"{BussinesErrors.NotFound.ToString()}: Not found with {request.Email} email");
+            _logger.LogWarning($"{BussinesErrors.NotFound.ToString()}: Not found with {request.Email} email");
             return Result.Error($"{BussinesErrors.NotFound.ToString()}: Not found with {request.Email} email");
         }
 
